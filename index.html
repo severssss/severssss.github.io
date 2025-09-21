@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правила и новости сервера АнМайн</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+        }
+        
+        /* --- НОВЫЕ СТИЛИ ДЛЯ РАЗМЕТКИ --- */
+        .page-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Выравнивание по верху */
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .container {
+            flex: 2; /* Основной контент занимает 2/3 ширины */
+            max-width: 800px;
+            margin: 0; /* Убираем старые отступы */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* --- СТИЛИ ДЛЯ НОВОСТНОЙ КОЛОНКИ --- */
+        .sidebar {
+            flex: 1; /* Новостная колонка занимает 1/3 ширины */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .news-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin: 0 0 5px 0;
+        }
+
+        .news-date {
+            font-size: 0.8em;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .news-content {
+            font-size: 0.95em;
+        }
+
+        /* --- АДАПТИВНОСТЬ: на маленьких экранах колонка новостей будет под правилами --- */
+        @media (max-width: 960px) {
+            .page-wrapper {
+                flex-direction: column;
+                margin: 20px auto;
+                align-items: stretch;
+            }
+        }
+        /* --- КОНЕЦ НОВЫХ СТИЛЕЙ --- */
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        header h1 {
+            color: #4CAF50;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            color: #777;
+            font-size: 1.1em;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .rule-section {
+            margin-bottom: 20px;
+        }
+        .rule {
+            margin-bottom: 15px;
+        }
+        .rule-title {
+            font-weight: bold;
+            color: #333;
+        }
+        .punishment {
+            background-color: #ffeeee;
+            border-left: 3px solid #d9534f;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            font-style: italic;
+        }
+        .important-note {
+            background-color: #fff3cd;
+            border-left: 3px solid #f0ad4e;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.95em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <main class="container">
+            <header>
+                <h1>АнМайн</h1>
+                <p>Игровые правила и новости сервера Minecraft Bedrock</p>
+            </header>
+
+            <section id="chat-rules">
+                <h2>1. Чат</h2>
+                <div class="rule">
+                    <p class="rule-title">1.1. Оскорбления, использование нецензурной или порнографической лексики.</p>
+                    <div class="punishment">Наказание: первое нарушение — мут на 30 минут, далее — мут от 2 до 6 часов.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">1.2. Флуд, спам, капс, транслит или попрошайничество.</p>
+                    <div class="punishment">Наказание: первое нарушение — мут на 15 минут, далее — мут от 30 минут до 2 часов.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">1.3. Затрагивание родственников, разжигание на почве политических, межнациональных или религиозных конфликтов, а так же дискриминация по каким-либо признакам.</p>
+                    <div class="punishment">Наказание: первое нарушение — мут на 6 часов, далее — бан от 1 до 3 дней.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">1.4. Обсуждение или упоминание других проектов.</p>
+                    <div class="punishment">Наказание: первое нарушение — мут от 12 до 24 часов, далее — бан от 3 до 7 дней.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">1.5. Угрозы переходящие в реальную жизнь, угрозы выдачи наказания без достойной причины или шантаж.</p>
+                    <div class="punishment">Наказание: первое нарушение — бан от 1 до 3 дней, далее — бан от 4 до 9 дней.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">1.6. Распространение информации о багах или читах.</p>
+                    <div class="punishment">Наказание: первое нарушение — бан от 3 до 7 дней, далее — бан от 7 до 14 дней.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">1.7. Оскорбление сервера, администрации или критика сервера в нецензурной форме.</p>
+                    <div class="punishment">Наказание: выдается только администрацией на собственное усмотрение.</div>
+                </div>
+            </section>
+
+            <section id="account-rules">
+                <h2>2. Аккаунт</h2>
+                <div class="rule">
+                    <p class="rule-title">2.1. Продажа или передача аккаунта.</p>
+                    <div class="punishment">Наказание: вечный бан и снятие привилегии.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">2.2. Нецензурный, порнографический, провокационный ник.</p>
+                    <div class="punishment">Наказание: вечный бан и возможность перенести привилегию.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">2.3. Скин, имеющий явные преимущества (cлишком маленький, прозрачный, 2D скин).</p>
+                    <div class="punishment">Наказание: бан на 1 день.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">2.4. Скин, несущий в себе символику межнациональной розни или порнографический характер.</p>
+                    <div class="punishment">Наказание: бан на 3 дня.</div>
+                </div>
+                 <div class="rule">
+                    <p class="rule-title">2.5. Ник, схожий с администрацией проекта.</p>
+                    <div class="punishment">Наказание: вечный бан и снятие привилегии.</div>
+                </div>
+            </section>
+
+            <section id="donator-rules">
+                <h2>3. Донатеры</h2>
+                 <div class="rule">
+                    <p class="rule-title">3.1. Выдача наказаний без достойной причины, превышение прав, выдача наказания без доказательств (скрины/видео) или оскорбление в причине наказания.</p>
+                    <div class="punishment">Наказание: первое нарушение — бан на 2 дня, далее — бан на 7 дней и понижение привилегии.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">3.2. Снятие наказаний с игрока без достойной или объективной причины.</p>
+                    <div class="punishment">Наказание: первое нарушение — бан на 2 дня, далее — бан на 7 дней и понижение привилегии.</div>
+                </div>
+            </section>
+
+            <section id="game-rules">
+                <h2>4. Игровой процесс</h2>
+                <div class="rule">
+                    <p class="rule-title">4.1. Читы, моды или текстуры, дающие преимущество перед другими игроками.</p>
+                    <div class="punishment">Наказание: вечный бан и снятие привилегии.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">4.2. Гриферство (Приманивание игроков путём обмана, использование телепортов или варпов с целью убийства, постройка ловушек. Разрушение чужих домов, если вы состоите в регионе), застройка чужих построек, обильная порча территории у региона.</p>
+                    <div class="punishment">Наказание: первое нарушение — бан на 3 дня, далее — бан на 7 дней и понижение привилегии. Снос построек при любом наказании.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">4.3. Создание помех нормальной игре другим игрокам.</p>
+                    <div class="punishment">Наказание: первое нарушение — кик, далее — бан от 1 до 3 дней.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">4.4. Попытка завладеть чужим аккаунтом.</p>
+                    <div class="punishment">Наказание: вечный бан и снятие привилегии.</div>
+                </div>
+                 <div class="rule">
+                    <p class="rule-title">4.5. Постройка половых органов или символик межнациональной розни (например: свастика).</p>
+                    <div class="punishment">Наказание: выдается на усмотрение администрации.</div>
+                </div>
+                 <div class="rule">
+                    <p class="rule-title">4.6. Подстрекательство на нарушение правил, обман администрации или игроков.</p>
+                    <div class="punishment">Наказание: бан от 7 до 20 дней.</div>
+                </div>
+                 <div class="rule">
+                    <p class="rule-title">4.7. Реклама сторонних серверов или ресурсов.</p>
+                    <div class="punishment">Наказание: бан на 30 дней и снятие привилегии.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">4.8. Багоюз, попытка нанести вред серверу.</p>
+                    <div class="punishment">Наказание: вечный бан и снятие привилегии.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">4.9. Выдача себя за администрацию проекта.</p>
+                    <div class="punishment">Наказание: вечный бан и снятие привилегии.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">4.10. Продажа чего либо за реальную валюту.</p>
+                    <div class="punishment">Наказание: бан на 7 дней и понижение привилегии.</div>
+                </div>
+                 <div class="rule">
+                    <p class="rule-title">4.11. Создание клана или мини-игры с нецензурным, порнографическим или провокационном названием.</p>
+                    <div class="punishment">Наказание: бан на 7 дней, удаление клана или комнаты и понижение привилегии.</div>
+                </div>
+                <div class="rule">
+                    <p class="rule-title">4.12. Систематическое нарушение правил проекта.</p>
+                    <div class="punishment">Наказание: выдается только администрацией на собственное усмотрение.</div>
+                </div>
+            </section>
+            
+            <div class="important-note">
+                <p>На обжалование наказания отводится 5 дней, после истечения срока администрация в праве отказать в предоставлении доказательств.<br>
+                Ответственность за нарушение правил несет исключительно владелец аккаунта, независимо от того, кто совершал действия под данным аккаунтом.<br>
+                Администрация имеет право отклоняться от правил и наказывать на свое усмотрение. Денежные средства, потраченные на донат не возвращаются.</p>
+                <p><strong>Вы имеете право снимать наказание с другого игрока, но если окажется, что игрок действительно нарушил и есть доказательства, то вы будете наказаны.</strong></p>
+            </div>
+
+            <footer>
+                <p>© 2025 АнМайн. Все права защищены.By: @MankaAtamanka</p>
+            </footer>
+        </main>
+        
+        <aside id="news-sidebar" class="sidebar">
+            <h2>Новости</h2>
+            <div id="news-container">
+                <p>Загрузка новостей...</p>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ID вашей Google Таблицы
+            const sheetId = '1mIZXcRhq-C_SFXu6Sv65UxK2KBjflQrYT6CkdVeaQac';
+            const sheetUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
+            const newsContainer = document.getElementById('news-container');
+
+            fetch(sheetUrl)
+                .then(response => response.text())
+                .then(text => {
+                    // "Очищаем" ответ от Google, чтобы получить чистый JSON
+                    const jsonString = text.substring(47).slice(0, -2);
+                    const data = JSON.parse(jsonString);
+                    
+                    // Очищаем сообщение "Загрузка..."
+                    newsContainer.innerHTML = '';
+
+                    const rows = data.table.rows;
+                    // Переворачиваем массив, чтобы последние добавленные новости были сверху
+                    rows.reverse().forEach(row => {
+                        // Проверяем, что строка и ячейки существуют
+                        if (row && row.c && row.c.length >= 3) {
+                            // Получаем данные из ячеек (c[0] - первая колонка, c[1] - вторая и т.д.)
+                            // Используем .f (форматированное значение), если оно есть (для дат), иначе .v (значение)
+                            const date = row.c[0] ? (row.c[0].f || row.c[0].v) : 'Нет даты';
+                            const title = row.c[1] ? row.c[1].v : 'Нет заголовка';
+                            const content = row.c[2] ? row.c[2].v : 'Нет содержания';
+
+                            const newsItem = document.createElement('div');
+                            newsItem.className = 'news-item';
+
+                            // Создаем HTML-разметку для одной новости
+                            // .replace(/\n/g, '<br>') заменяет переносы строк в таблице на теги <br> для корректного отображения на сайте
+                            newsItem.innerHTML = `
+                                <p class="news-date">${date}</p>
+                                <h3 class="news-title">${title}</h3>
+                                <p class="news-content">${content.replace(/\n/g, '<br>')}</p>
+                            `;
+
+                            newsContainer.appendChild(newsItem);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Ошибка при загрузке новостей:', error);
+                    newsContainer.innerHTML = '<p>Не удалось загрузить новости. Пожалуйста, попробуйте позже.</p>';
+                });
+        });
+    </script>
+</body>
+</html>
+
